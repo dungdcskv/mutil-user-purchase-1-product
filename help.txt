@@ -1,0 +1,6 @@
+// docker run --name redis-container -d -p 6379:6379 redis
+
+// ab -n 10 -c 2 http://localhost:3000/order
+// -n: so luong request
+// -c: so luong request cung 1 thoi diem
+// curl http://localhost:3000/order 

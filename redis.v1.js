@@ -25,7 +25,7 @@ app.get('/order', async (req, res) => {
 
         // gia su moi lan mua hang chi mua 1 sp
         const slMua = 1
-        // so luong ban ra, neu chua ban thi set = 0, con neu ba thi update + 1 moi lan user order thanh cong
+        // so luong ban ra, neu chua ban thi set = 0, con neu ban thi update + 1 moi lan user order thanh cong
         const getKey = await exists(keyName)
         if (!getKey) {
             // set = 0
@@ -34,7 +34,7 @@ app.get('/order', async (req, res) => {
         // lay so luong ban ra
         let slBanRa = parseInt(await get(keyName));
 
-        console.log(`Truoc khi user order thanh cong thi sl ban ra ===`, slBanRa, slMua, slBanRa + slMua);
+        console.log(`Truoc khi user order thanh cong thi sl ban ra ===`, slBanRa, slMua);
 
         // neu so luong ban ra + so luong mua > sl ton kho return false
         if (slBanRa + slMua > slTonKho) {
@@ -50,6 +50,10 @@ app.get('/order', async (req, res) => {
         slBanRa = await incrby(keyName, slMua)
 
         console.log(`Sau khi user order thanh cong thi sl ban ra ===`, slBanRa);
+
+        if (slBanRa > slTonKho) {
+            await set('banQuaRoi', slBanRa - slTonKho)
+        }
 
         console.log('date', date)
         return res.json({

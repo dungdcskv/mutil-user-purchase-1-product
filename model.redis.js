@@ -79,6 +79,14 @@ const setnx = async (key, value) => {
     }
 };
 
+const redisDel = async ([key]) => {
+    try {
+        return await client.del(key);
+    } catch (err) {
+        throw new Error(err);
+    }
+};
+
 module.exports = {
     get,
     set,
@@ -86,4 +94,5 @@ module.exports = {
     decrby,
     exists,
     setnx,
+    redisDel,
 }

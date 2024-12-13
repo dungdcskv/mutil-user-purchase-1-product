@@ -5,11 +5,13 @@
   "license": "MIT",
   "dependencies": {
     "express": "^4.21.2",
+    "mysql2": "^3.11.5",
     "nodemon": "^3.1.7",
     "redis": "^4.7.0"
   },
   "scripts": {
     "start": "node redis.v1.js",
-    "dev": "nodemon redis.v1.js"
+    "dev": "nodemon redis.v1.js",
+    "dev2": "nodemon redis.v2.js"
   }
 }

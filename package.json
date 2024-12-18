@@ -4,7 +4,10 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
+    "bull": "^4.16.4",
     "express": "^4.21.2",
+    "ioredis": "^5.4.1",
+    "mongoose": "^8.9.0",
     "mysql2": "^3.11.5",
     "nodemon": "^3.1.7",
     "redis": "^4.7.0"
@@ -12,6 +15,7 @@
   "scripts": {
     "start": "node redis.v1.js",
     "dev": "nodemon redis.v1.js",
-    "dev2": "nodemon redis.v2.js"
+    "dev2": "nodemon redis.v2.js",
+    "dev3": "nodemon redis.v3.js"
   }
 }

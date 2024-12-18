@@ -9,3 +9,7 @@
 Run redis on local:
 docker run --name my-redis -d -p 6379:6379 redis
 docker exec -it redis-container redis-cli
+
+
+ab -n 2 -c 1 http://localhost:3000/order
+ab -n 100 -c 20 http://localhost:3000/order

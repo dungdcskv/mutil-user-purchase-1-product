@@ -1,0 +1,4 @@
+When to Use the Strategy Pattern:
+- When you have multiple ways to perform a task, and you want to make these algorithms interchangeable.
+- To avoid using multiple if-else or switch statements.
+- To improve the scalability of your code.

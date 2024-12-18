@@ -1,0 +1,8 @@
+Khi tìm hiểu từng DP, ít nhất bạn nên nắm vững những điểm sau:
+- mục đích của DP
+- nó giải quyết vđ gì
+- có thể sử dụng nó khi nào
+
+Chúng ta sẽ tìm hiểu từ những DP có độ thông dụng lớn + độ phức tạp bé trước:
+
+- DP đầu tiên: Strategy pattern

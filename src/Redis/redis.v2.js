@@ -9,7 +9,7 @@ const {
     setnx,
     del,
 } = require('./model.redis.js');
-const Product = require('./models/Product.js');
+const Product = require('../../models/Product.js');
 
 
 const app = express()
